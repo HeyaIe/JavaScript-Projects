@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Index</title>
+        <script src="JS/main.js"></script>
+    </head>
+
+    <body>
+        
+        <input  onkeypress="additionFunction()" placeholder="3 + 1 = ">
+        <p id="Math"></p><br>
+
+        <p id="subtraction" onclick="subtractionFunction()">5 - 2 = ? (Click for answer)</p>
+        <br>
+
+        <input type="text" value="3 * 3 = ? (Select for answer)" onselect="multiplication()">
+        <p id="multiplication"></p>
+        <br>
+
+        <p id="division" ondblclick="division()">100 / 10 = ? (double click for answer)</p>
+        <br>
+
+        <p onclick="multipleOperators()">(50 + 60) / 2 - 10 * 3 = ? (Click)</p>
+        <p id="multipleOp"></p>
+        <br>
+
+        <p onclick="modulusOperator()">32 % 5 = ? (Click)</p>
+        <p id="modulus"></p>
+        <br>
+        
+        <p onclick="negationOperator()" id="negative">Click to make "20" negative</p>
+        <br>
+        
+        <!-- Increment/Decrement operators -->
+        <script>
+            var x = 5;
+            ++x;
+            document.write("++5 = " + x + "<br><br>");
+
+            var y = 1.23;
+            document.write("--1.23 = " + --y + "<br><br>");
+
+            window.alert(Math.random() * 100);
+        </script>
+
+        <p onclick="degToRad(45)">Click to convert 45 degrees to radians.</p>
+        <p id="radians"></p>
+    </body>
+</html>
