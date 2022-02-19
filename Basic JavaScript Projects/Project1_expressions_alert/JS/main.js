@@ -32,3 +32,8 @@ function My_First_Function(){
     // function is called.
     document.getElementById("Button_Text").innerHTML = str;
 }
+
+function key_Function(){
+    var str = "Key Pressed";
+    document.getElementById("KeyPressed").innerHTML = str;
+}
