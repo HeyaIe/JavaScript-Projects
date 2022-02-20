@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Index</title>
+        <script src="JS/main.js"></script>
+    </head>
+
+    <body>
+        
+        <!-- obtaining the result NaN -->
+        <p id="test" onclick="test_func()">0 / 0 = ? (click)</p>
+        
+
+        <!-- boolean results for isNaN -->
+        <p id="test2" onclick="isNumber()">Is "string" not a number? (click)</p>
+        <p id="test3" onclick="isNumber1()">Is 30 not a number? (click)</p>
+
+        <script>
+            // display "infinity"
+            document.write(2E308 + "<br>");
+            // display "-infinity"
+            document.write(-2E308 + "<br><br>");
+
+            // boolean logic
+            document.write("is 5>2 && 10<=11? " + (5>2 && 10<=11) + "<br>"); // using AND
+            document.write("is 3<2 || 22>25? " + (3 < 2 || 22 > 25)); // using OR
+
+            // equal check
+            document.write("<br><br>Is 3 == 2? " + isEqual(3, 2));
+            document.write("<br>Is 5 == 5? " + isEqual(5, 5));
+
+            // without type coercion
+            document.write("<br>Is \"Bryan\" === \"bryan\"? " + isEquivalent("Bryan", "bryan"));
+            document.write("<br>Is \"Bryan\" === \"Bryan\"? " + isEquivalent("Bryan", "Bryan"));
+            document.write("<br>Is 5 === \"five\"? " + isEquivalent(5, "five"));
+            document.write("<br>Is 6 === 3? " + isEquivalent(6, 3));
+
+            // not operator
+            document.write("<br><br>Is !(6 > 3)? " + notOp(6, 3));
+            document.write("<br>Is !(13<20)? " + notOp(13, 20));
+        </script>
+
+
+    </body>
+</html>
