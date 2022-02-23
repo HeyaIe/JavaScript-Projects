@@ -14,14 +14,39 @@
 //     tick();
 // }
 
+
+
 // Global variables
 var slideIndex = 1;
 showSlides(slideIndex);
+var myTimer;
+
+// Pauses slideshow
+function pause(){
+    clearInterval(myTimer);
+}
+// Resumes slideshow
+function resume(){
+    clearInterval(myTimer);
+    myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
+}
 
 // Maneuver between slides
 function plusSlides(n){
-    showSlides(slideIndex += n);
+    clearInterval(myTimer);
+  if (n < 0){
+    showSlides(slideIndex -= 1);
+  } else {
+   showSlides(slideIndex += 1); 
+  }
+  // Automatic slideshow
+  if (n === -1){
+    myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+  } else {
+    myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+  }
 }
+
 
 // Show specific slide
 function currentSlide(n){
@@ -43,20 +68,19 @@ function showSlides(n){
     if(n < 1){
         slideIndex = slides.length;
     }
-    // Not sure how this whole loop works,
-    // Doesn't the variable i resets to 0 everytime?
+    
+    // Removes all slides
     for(i = 0; i < slides.length; ++i){
         slides[i].style.display = "none";
     }
     for(i = 0; i< dots.length; ++i){
-        // Not too sure how the replace() method works,
-        // Replacing className='dot' with " active"?
-        // what is the 2nd argument?
+    
         dots[i].className = dots[i].className.replace(" active", ""); 
         
     }
     
     // display slides[slideIndex]
-    slides[slideIndex-1].style.display = "block"; // ?
-    dots[slideIndex-1].className += " active"; // ?
+    slides[slideIndex-1].style.display = "block";
+    // assigning class
+    dots[slideIndex-1].className += " active";
 }
