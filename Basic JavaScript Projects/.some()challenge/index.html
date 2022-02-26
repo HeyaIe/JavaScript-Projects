@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exes & Os</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <p>nums = [20, 30, 40, 50, 15, 23, 45, 36, 9]</p>
+    <p id="result"></p>
+
+    <script>
+        let nums = [20, 30, 40, 50, 15, 23, 45, 36, 9];
+
+        checkNum = (num) => num > 50;
+        
+        document.getElementById("result").innerHTML = "Are any of the numbers in the array more than 50?: " + nums.some(checkNum);
+
+    </script>
+
+</body>
+</html>
