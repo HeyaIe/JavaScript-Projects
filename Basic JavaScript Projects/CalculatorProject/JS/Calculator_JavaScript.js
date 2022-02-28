@@ -16,7 +16,8 @@ const Calculator = {
 
 // This modifies values each time a button is clicked
 function Input_Digit(digit){
-        const { Display_Value, Wait_Second_Operand } = Calculator;
+    // Object destructuring
+    const { Display_Value, Wait_Second_Operand } = Calculator;
 
     // If Wait_Second_Operand true and set Display_Value to
     // the key that was clicked
@@ -53,7 +54,7 @@ function Handle_Operator(Next_Operator){
     const Value_of_Input = parseFloat(Display_Value);
 
     // Checks if an operator already exists and if Wait_Second_Operand is true,
-    // the updates the operator and exits from the function
+    // then updates the operator and exits from the function
     if(Operator && Calculator.Wait_Second_Operand){
         Calculator.Operator = Next_Operator;
         return;
@@ -67,6 +68,7 @@ function Handle_Operator(Next_Operator){
         // If operator exists, property lookup is performed for
         // the operator in the Perform_Calculation object and the
         // function that matches the operator is executed
+        // Is there a name for this expression? For research
         let result = Perform_Calculation[Operator](Value_Now, Value_of_Input);
 
         // Add a fixed amount of numbers after the decimal
