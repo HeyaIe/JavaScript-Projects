@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <p id="XML_Example"></p>
+        
+        <script>
+
+            var XML_Parser, XML_Document;
+
+            var Employees = "<employee>" +
+                "<name>Heyale</name>" +
+                "<age>6</age>" +
+                "</employee>";
+
+
+            // Creates an XML DOM parser
+            XML_Parser = new DOMParser();
+
+            // Creates a new XML DOM object using the text string
+            XML_Document = XML_Parser.parseFromString(Employees, "text/xml");
+
+            document.getElementById("XML_Example").innerHTML = 
+                XML_Document.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+
+
+        </script>
+
+
+    </body>
+</html>

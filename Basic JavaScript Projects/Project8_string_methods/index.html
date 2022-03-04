@@ -3,10 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Index</title>
+        <link rel="stylesheet" type="text/css" href="CSS/fade.css">
         <script src="JS/main.js"></script>
     </head>
 
     <body>
+
+        <script>
+            document.body.classList.add('fade-out');
+        </script>
+
         <!-- Concat() method -->
         <input id="name" value="">Please enter name<br>
         <button onclick="concatenate()">Submit!</button>
@@ -49,12 +55,15 @@
         <p id="PI"></p>
 
         <!-- toFixed() method -->
-        <p>Enter a number as a specified number of decimals to round PI</p>
+        <p style="font-size: 3vw;">Enter a number as a specified number of decimals to round PI</p>
         <input id="round" value="">
         <button onclick="roundMethod()">Submit!</button>
         <p id="PI1"></p>
 
         <!-- valueOf() method -->
         <p id="value" onclick="getValue()">Click for the value of languages</p>
+
+        
+
     </body>
 </html>

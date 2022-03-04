@@ -90,3 +90,7 @@ function getValue(){
 
     document.getElementById("value").innerHTML = languages.valueOf();
 }
+
+window.addEventListener("DOMContentLoaded", () =>{
+    document.body.classList.remove('fade-out');
+});
