@@ -10,3 +10,8 @@ function count_ten(){
     }
     document.getElementById("Counting_to_Ten").innerHTML = digit;
 }
+
+var s = "";
+
+document.getElementById("x").innerHTML = s += "hi";
+document.getElementById("x").innerHTML = s += "no";
